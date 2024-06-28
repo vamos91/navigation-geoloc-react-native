@@ -22,7 +22,6 @@ const ScreenPage1 = () => {
                 setErrorMsg('Permission to access location was denied');
                 return;
               }
-              
             // let location = await Location.getCurrentPositionAsync()
             // setLat(location.coords.latitude)
             // setLng(location.coords.longitude)
@@ -32,6 +31,7 @@ const ScreenPage1 = () => {
                 timeInterval: 1000,
                 accuracy:Location.Accuracy.High,
             }, (location) => {
+                console.log(location)
                 setLat(location.coords.latitude)
                 setLng(location.coords.longitude)
             })
